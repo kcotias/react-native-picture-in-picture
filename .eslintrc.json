@@ -1,0 +1,10 @@
+{
+  "extends": "react-native-wcandillon",
+  "plugins": ["reanimated"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "prefer-destructuring": 0,
+  }
+}
