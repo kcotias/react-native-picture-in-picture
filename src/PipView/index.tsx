@@ -9,7 +9,7 @@ import Animated, {
 } from "react-native-reanimated";
 import { clamp } from "react-native-redash";
 
-import Card  from "../components/Card";
+import Card from "../components/Card";
 
 const styles = StyleSheet.create({
   container: {
@@ -22,8 +22,14 @@ interface GestureProps {
   height: number;
 }
 
-const Gesture = ({ width, height, containerStyles, children }: GestureProps) => {
-  const { width as deviceWidth, height as deviceHeight } = Dimensions.get('window');
+const Gesture = ({
+  width,
+  height,
+  containerStyles,
+  children,
+  visible,
+}: GestureProps) => {
+  const { width: deviceWidth, height: deviceHeight } = Dimensions.get("window");
   const boundX = deviceWidth - width;
   const boundY = deviceHeight - height;
   const translateX = useSharedValue(0);
@@ -58,12 +64,21 @@ const Gesture = ({ width, height, containerStyles, children }: GestureProps) => 
       ],
     };
   });
+
   return (
-    <PanGestureHandler {...{ onGestureEvent }}>
-      <Animated.View {...{ style }}>
-        <Card containerStyles={containerStyles} containerHeight={width} containerWidth={height}>{children}</Card>
-      </Animated.View>
-    </PanGestureHandler>
+    visible && (
+      <PanGestureHandler {...{ onGestureEvent }}>
+        <Animated.View {...{ style }}>
+          <Card
+            containerStyles={containerStyles}
+            containerHeight={width}
+            containerWidth={height}
+          >
+            {children}
+          </Card>
+        </Animated.View>
+      </PanGestureHandler>
+    )
   );
 };
 
