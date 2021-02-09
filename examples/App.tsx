@@ -1,17 +1,21 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import PipView from 'react-native-picture-in-picture';
+import PipView from './src/PipView';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <PipView width={100} height={100} />
+      <PipView
+        width={200}
+        height={200}
+        containerStyles={{backgroundColor: 'red'}}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {flex: 1},
+  container: {flex: 1, backgroundColor: 'yellow'},
 });
 
 export default App;

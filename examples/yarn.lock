@@ -5452,13 +5452,14 @@ react-native-gesture-handler@^1.10.0:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
-"react-native-picture-in-picture@file:../react-native-picture-in-picture-1.0.1.tgz":
-  version "1.0.1"
-  resolved "file:../react-native-picture-in-picture-1.0.1.tgz#3b04301374fe2a7eaedb482a61accd2de0e296ac"
+"react-native-picture-in-picture@file:../react-native-picture-in-picture-1.0.3.tgz":
+  version "1.0.3"
+  resolved "file:../react-native-picture-in-picture-1.0.3.tgz#ccf022a785906474c92c3c9b11fe740e6166bdd1"
   dependencies:
-    react-native-redash "16.0.6"
+    react-native-reanimated "^2.0.0-rc.0"
+    react-native-redash "^16.0.6"
 
-react-native-reanimated@^2.0.0-rc.3:
+react-native-reanimated@^2.0.0-rc.0:
   version "2.0.0-rc.3"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.0.0-rc.3.tgz#7c9e0228ccab0e40831c1c80eb23cf834f6d5707"
   integrity sha512-tjFGraTI1mnwQ9TspNpxs1oVqi1OImEAvKhRwBYvZoVuIS+VPQuMfB+DdohQIDe+hxzbfvoZMXe+A3TzJuSM0g==
@@ -5467,10 +5468,10 @@ react-native-reanimated@^2.0.0-rc.3:
     fbjs "^3.0.0"
     string-hash-64 "^1.0.3"
 
-react-native-redash@16.0.6:
-  version "16.0.6"
-  resolved "https://registry.yarnpkg.com/react-native-redash/-/react-native-redash-16.0.6.tgz#7f2bd9b93cd1dd2dafef6c4277014e97e7efb495"
-  integrity sha512-03OvoJq1ow2886/Ipv6F18gQE1yhqTLWDwmDWzorT1+5DVfz429Z5G5R/e9q2hNKPfBkDp0+hAC4uc8K6t2EvQ==
+react-native-redash@^16.0.6:
+  version "16.0.8"
+  resolved "https://registry.yarnpkg.com/react-native-redash/-/react-native-redash-16.0.8.tgz#734b016f17dc747560891502b6c5db5e04a17850"
+  integrity sha512-2Opu4ls31HRGQnz11iq4cnJhCz0GnasnnZgihAlCsVFc9ofa9+47hbc1xo/WkN0OZ5X5KKo869soyfYQgIxy+w==
   dependencies:
     abs-svg-path "^0.1.1"
     normalize-svg-path "^1.0.1"

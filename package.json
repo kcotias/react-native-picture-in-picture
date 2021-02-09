@@ -1,6 +1,6 @@
 {
   "name": "react-native-picture-in-picture",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A versatile Picture in Picture function built with React Native and Reanimated 2",
   "main": "index.js",
   "scripts": {
@@ -34,11 +34,11 @@
     "draggable"
   ],
   "peerDependencies": {
-    "react-native-reanimated": "2.0.0-rc.0",
     "react-native-gesture-handler": "^1.9.0"
   },
   "dependencies": {
-    "react-native-redash": "16.0.6"
+    "react-native-redash": "^16.0.6",
+    "react-native-reanimated": "^2.0.0-rc.0"
   },
   "devDependencies": {
     "eslint-plugin-reanimated": "^1.0.8",
