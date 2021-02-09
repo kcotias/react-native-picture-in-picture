@@ -5452,9 +5452,9 @@ react-native-gesture-handler@^1.10.0:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
-"react-native-picture-in-picture@file:../react-native-picture-in-picture-1.0.0.tgz":
-  version "1.0.0"
-  resolved "file:../react-native-picture-in-picture-1.0.0.tgz#ae138d0c284f46371151f592df3d543c85287911"
+"react-native-picture-in-picture@file:../react-native-picture-in-picture-1.0.1.tgz":
+  version "1.0.1"
+  resolved "file:../react-native-picture-in-picture-1.0.1.tgz#3b04301374fe2a7eaedb482a61accd2de0e296ac"
   dependencies:
     react-native-redash "16.0.6"
 
