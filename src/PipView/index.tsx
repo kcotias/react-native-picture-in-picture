@@ -22,18 +22,17 @@ interface GestureProps {
   height: number;
 }
 
-const Gesture = ({
+const PipView = ({
   width,
   height,
   containerStyles,
   children,
-  visible,
 }: GestureProps) => {
   const { width: deviceWidth, height: deviceHeight } = Dimensions.get("window");
   const boundX = deviceWidth - width;
   const boundY = deviceHeight - height;
-  const translateX = useSharedValue(0);
-  const translateY = useSharedValue(0);
+  const translateX = useSharedValue(deviceWidth - width / 0.95);
+  const translateY = useSharedValue(deviceHeight - height / 0.8);
 
   const onGestureEvent = useAnimatedGestureHandler({
     onStart: (event, context) => {
@@ -58,6 +57,7 @@ const Gesture = ({
 
   const style = useAnimatedStyle(() => {
     return {
+      position: "absolute",
       transform: [
         { translateX: translateX.value },
         { translateY: translateY.value },
@@ -66,20 +66,18 @@ const Gesture = ({
   });
 
   return (
-    visible && (
-      <PanGestureHandler {...{ onGestureEvent }}>
-        <Animated.View {...{ style }}>
-          <Card
-            containerStyles={containerStyles}
-            containerHeight={width}
-            containerWidth={height}
-          >
-            {children}
-          </Card>
-        </Animated.View>
-      </PanGestureHandler>
-    )
+    <PanGestureHandler {...{ onGestureEvent }}>
+      <Animated.View {...{ style }}>
+        <Card
+          containerStyles={containerStyles}
+          containerHeight={width}
+          containerWidth={height}
+        >
+          {children}
+        </Card>
+      </Animated.View>
+    </PanGestureHandler>
   );
 };
 
-export default Gesture;
+export default PipView;
